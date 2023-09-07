@@ -19,8 +19,6 @@ aNote is a lightweight note-taking software designed to help you organize your t
    ```bash
    git clone https://github.com/SuntoshKumar/aNote.git
 
-![Screenshot](https://github.com/SuntoshKumar/aNote/blob/main/src/main/resources/screenshoot1.png)
-
 ![Screenshot](https://github.com/SuntoshKumar/aNote/blob/main/src/main/resources/screenshoot2.png)
 
 ![Screenshot](https://github.com/SuntoshKumar/aNote/blob/main/src/main/resources/screenshoot3.png)
