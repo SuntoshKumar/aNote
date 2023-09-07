@@ -26,10 +26,11 @@ aNote is a lightweight note-taking software designed to help you organize your t
 
 ![Screenshot](https://github.com/SuntoshKumar/aNote/blob/main/src/main/resources/screenshoot5.png)
 
+![Screenshot](https://github.com/SuntoshKumar/aNote/blob/main/src/main/resources/screenshoot6.png)
 
 MIT License
 
-Copyright (c) [year] [author]
+Copyright (c) 2023 SamKrish
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -48,7 +49,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-![Screenshot](https://github.com/SuntoshKumar/aNote/blob/main/src/main/resources/screenshoot6.png)
 
 
 
