@@ -17,12 +17,12 @@ enum class Screen(
 
     ToDoList(
         label = "TODO",
-        icon = Icons.Rounded.Checklist
+        icon = Icons.Filled.Checklist
     ),
 
     WatchScreen(
         label = "StopWatch",
-        icon = Icons.Default.Timer
+        icon = Icons.Filled.Timer
     ),
 
     User(

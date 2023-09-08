@@ -25,13 +25,15 @@ import utils.DatabaseStatus
 import utils.getNoteLists
 import java.util.prefs.Preferences
 
+const val SCROLL_POSITION_PREF = "SCROLL_POSITION_PREF"
+const val SCROLL_POSITION = "SCROLL_POSITION"
 @Composable
 @Preview
 fun HomeScreen(
     navController: NavController
 ) {
-    val preferences = Preferences.userRoot().node("your_app_namespace")
-    val savedScrollPosition = preferences.getInt("scroll_position", 0)
+    val preferences = Preferences.userRoot().node(SCROLL_POSITION_PREF)
+    val savedScrollPosition = preferences.getInt(SCROLL_POSITION, 0)
     //noteList = getNoteList()
     val useLinearLayout by remember { mutableStateOf(pref.getBoolean(USE_LINEAR_LAYOUT, false)) }
     val lazyGridState = rememberLazyGridState(initialFirstVisibleItemIndex = savedScrollPosition)
@@ -62,6 +64,7 @@ fun HomeScreen(
                     itemsIndexed(noteList.value) { _, item ->
 
                         LinearNoteCard(navController, item, preferences, lazyListState.firstVisibleItemIndex)
+                        //println("Hello position ${lazyListState.firstVisibleItemIndex}")
                     }
                 }
 
@@ -80,6 +83,7 @@ fun HomeScreen(
                     itemsIndexed(noteList.value) { _, item ->
 
                         NoteCard(navController, item, preferences, lazyGridState.firstVisibleItemIndex)
+
                     }
 
                 }
@@ -111,6 +115,8 @@ fun HomeScreen(
     LaunchedEffect(Unit) {
         getNoteLists().collect {
             noteList.value = it.list.toList()
+            lazyGridState.scrollToItem(savedScrollPosition)
+            lazyListState.scrollToItem(savedScrollPosition)
         }
     }
 }

@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.sp
 import cNote
 import data.Note
 import navigation.NavController
+import screens.SCROLL_POSITION
 import screens.currentNote
 import screens.databaseStatus
 import utils.*
@@ -45,7 +46,7 @@ fun NoteCard(navController: NavController, note: Note, preferences: Preferences,
                 cNote = note
                 currentNote = note
                 navController.navigate("EditNoteView")
-                preferences.putInt("scroll_position", firstVisibleItemIndex)
+                preferences.putInt(SCROLL_POSITION, firstVisibleItemIndex)
             },
         elevation = 4.dp,
         shape = RoundedCornerShape(12.dp),
@@ -172,7 +173,8 @@ fun LinearNoteCard(navController: NavController, note: Note, preferences: Prefer
                 cNote = note
                 currentNote = note
                 navController.navigate("EditNoteView")
-                preferences.putInt("scroll_position", firstVisibleItemIndex)
+                preferences.putInt(SCROLL_POSITION, firstVisibleItemIndex)
+                println("HHHHHH $firstVisibleItemIndex")
             },
         elevation = 4.dp,
         shape = RoundedCornerShape(12.dp),
